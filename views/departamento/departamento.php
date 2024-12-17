@@ -9,21 +9,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="departamento.css">
+    
 </head>
 <body>
 
-  <?php include '../includes/navbar.php'; ?>
+  <?php include '../../includes/navbar.php'; ?>
+
+  <link rel="stylesheet" href="departamento.css"> <!--link depois do include para ter prioridade de css-->
     <div class="container">
-      <h1>Departamentos</h1>
-  
+      <br>
+      <h1 class="display-5">Departamentos</h1>
+      <br>
       <div class="card">
         <h2>Cardiologia</h2>
         <p>O Departamento de Cardiologia conta com equipamentos de última geração e uma equipe altamente qualificada para diagnosticar e tratar doenças do coração e do sistema circulatório. Oferecemos um atendimento personalizado para promover a saúde cardíaca dos nossos pacientes.</p>
         <div class="footer">
           <span>Dr. Preston Burke</span>
           <div class="profile-pic">
-            <img src="../img/preston-burke.png" alt="Foto do Dr. Preston Burke">
+            <img src="../../img/preston-burke.png" alt="Foto do Dr. Preston Burke">
           </div>
         </div>
       </div>
@@ -34,7 +37,7 @@
         <div class="footer">
           <span>Dra. Amelia Shepherd</span>
           <div class="profile-pic">
-            <img src="../img/amelia-shepherd.png" alt="Foto da Dra. Amelia Shepherd">
+            <img src="../../img/amelia-shepherd.png" alt="Foto da Dra. Amelia Shepherd">
           </div>
         </div>
       </div>
@@ -45,12 +48,12 @@
         <div class="footer">
           <span>Dr. Derek Shepherd</span>
           <div class="profile-pic">
-            <img src="../img/derek-shepherd.png" alt="Foto do Dr. Derek Shepherd">
+            <img src="../../img/derek-shepherd.png" alt="Foto do Dr. Derek Shepherd">
           </div>
         </div>
       </div>
   
     </div>
-    <?php include '../includes/footer.html'; ?>
+    <?php include '../../includes/footer.php'; ?>
 </body>
 </html>

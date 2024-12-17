@@ -35,3 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarrossel('carrossel-eventos');
     initCarrossel('carrossel-noticias');
 });
+

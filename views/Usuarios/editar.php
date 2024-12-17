@@ -70,7 +70,7 @@ if (isset($_POST) && count($_POST) > 0) {
                             value="<?= $dado->getEmail(); ?>">
                     </div>
                     <button type="submit" class="btn btn-success">Gravar</button>
-                    <a href="./" class="btn btn-primary">Voltar</a>
+                    <a href="../agendamento/agendamento.php" class="btn btn-primary">Voltar</a>
                 </form>
             </div>
         </div>

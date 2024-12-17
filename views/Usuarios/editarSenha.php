@@ -49,9 +49,8 @@ if (isset($_POST) && count($_POST) > 0) {
 <body>
     <div class="container">
         <div class="row mt-3">
-            <?php include "../includes/menu.php"; ?>
             <div class="col-9">
-                <h3>Cadastro de usuário</h3>
+                <h3>Mudar Senha</h3>
                 <?php FlashMessage::getMessage(); ?>
                 <form action="" method="post">
                     <input type="hidden" name="campoId" value="<?= $dado->getId(); ?>">
@@ -85,12 +84,11 @@ if (isset($_POST) && count($_POST) > 0) {
                     </div>
                     <!--  Botão de envio dos dados -->
                     <button type="submit" class="btn btn-success">Gravar</button>
-                    <a href="./" class="btn btn-primary">Voltar</a>
+                    <a href="../agendamento/agendamento.php" class="btn btn-primary">Voltar</a>
                 </form>
             </div>
         </div>
     </div>
-    <?php include "../includes/js.php"; ?>
 </body>
 
 </html>

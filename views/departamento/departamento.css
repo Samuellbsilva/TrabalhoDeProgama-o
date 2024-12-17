@@ -5,8 +5,6 @@ body {
     padding: 0;
   }
   
- 
-  
   h1 {
     color: #000000;
     margin-bottom: 20px;
@@ -44,11 +42,15 @@ body {
   }
   
   .profile-pic {
-    width: 40px;
-    height: 40px;
+    width: 10%;
+    height: 10%;
     overflow: hidden;
     border-radius: 50%;
     border: 2px solid #004d4d;
+  }
+  .profile-pic:hover{
+
+    transform: scale(1.4);
   }
   
   .profile-pic img {

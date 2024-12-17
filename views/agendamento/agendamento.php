@@ -2,7 +2,8 @@
     include "../../includes/autoLoad.php";
     Security::verifyAuthentication();
     $id = isset($_GET['id']) ? $_GET['id'] : '';
-
+   
+    
 ?>
 
 <!DOCTYPE html>
@@ -13,17 +14,19 @@
     <title>Visão Geral</title>
     <link rel="stylesheet" href="agendamento.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<?php include '../includes/include.php'; ?>
+<link rel="stylesheet" href="agendamento.css">
+<?php include '../../includes/navbar.php';
+ ?>
+
     <div class="container">
     <div class="d-flex justify-content-center p-4">
-        <a href="../Usuarios/editar.php?id=<?php echo $id; ?>" class="btn btn-success m-4">Editar Ùsuario</a>
-        <a href="../Usuarios/editarSenha.php?id=<?php echo $id; ?>"" class="btn btn-secondary m-4">Editar Senha</a>
+        <a href="../Usuarios/editar.php?id=<?php echo $_SESSION['usuario_id']; ?>" class="btn btn-success m-4">Editar Usuario</a>
+        <a href="../Usuarios/editarSenha.php?id=<?php echo $_SESSION['usuario_id']; ?>" class="btn btn-secondary m-4">Editar Senha</a>
         
 </div>
         <h1>Visão Geral</h1>
@@ -51,6 +54,7 @@
     <button type="submit" class="btn btn-danger">Sair</button>
 </form>
     </div>
-    <?php include '../includes/footer.php'; ?>
+    
+    <?php include '../../includes/footer.php'; ?>
 </body>
 </html>

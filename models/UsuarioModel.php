@@ -113,19 +113,8 @@ class UsuarioModel
     $stmt->execute();
 
     // Busca o resultado da consulta (um único usuário)
-    $user = $stmt->fetch();
+    return $stmt->fetch();;
 
-    // Se encontrar o usuário, realiza o login
-    if ($user) {
-        // Armazena o usuário na sessão
-        $_SESSION[SessionConf::$sessionObj] = serialize($user);
-
-        // Redireciona para a página de agendamento após login bem-sucedido
-        exit();  // Certifique-se de que o script pare de executar após o redirecionamento
-    } else {
-        // Se o usuário não for encontrado, exibe a mensagem de erro
-        FlashMessage::setMessage("Usuário ou senha inválidos", 0);
-    }
 }
 
     

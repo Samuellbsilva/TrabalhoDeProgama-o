@@ -1,16 +1,10 @@
 <?php
 include "../../includes/autoLoad.php";
 
-
-
 if(isset($_POST) && count($_POST) > 0) {
     // Faz requisição do controlador
 
     require_once __DIR__ . "/../../controllers/LoginController.php";
-
-    
-
-
 
     // Instancia o objeto
     $user = new Usuario();
@@ -22,6 +16,8 @@ if(isset($_POST) && count($_POST) > 0) {
     $LoginController = new LoginController();
     // Executa método ADD
     $rs = $LoginController->login($user);
+
+    die();
    
     // Redireciona para a INDEX
     if ($rs) {
