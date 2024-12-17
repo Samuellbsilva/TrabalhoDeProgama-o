@@ -3,7 +3,7 @@
 	{
 		public static $sessionObj = 'Usuario';
 		public static $sessionLogout = 'views/Usuarios/sair.php';
-		public static $sessionLogin = 'views/Usuarios/login.php';
+		public static $sessionLogin = '/login.php';
 		public static $sessionError = 'erro.php';
-		public static $sessionFolderPath = 'hospital-main';
+		public static $sessionFolderPath = 'clinica%20esperança/views/Usuarios';
 	}

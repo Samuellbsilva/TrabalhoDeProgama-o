@@ -16,13 +16,21 @@ class LoginController {
     }
 
     public function login(Usuario $user) {
+        
         $rs = $this->model->login($user);
+
         if($rs) {
             $_SESSION[SessionConf::$sessionObj] = serialize($rs);   
-            Redirect::link(Security::path());
+            $_SESSION['usuario_nome'] = $rs->getNome();
+            $_SESSION['usuario_id'] = $rs->getId();
+            $_SESSION['usuario_email'] = $rs->getEmail();
+           
+
+            header('location: ../agendamento/agendamento.php');
             exit();
         } else {
             FlashMessage::setMessage("Usuário ou senha inválido", 0);
+            header('location: ../Usuarios/login.php');
         }
     }
 

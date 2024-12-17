@@ -4,7 +4,7 @@
 	{
 		public static function path()
 		{
-			return "http://$_SERVER[HTTP_HOST]/" . SessionConf::$sessionFolderPath . "/";
+			return "http://$_SERVER[HTTP_HOST]/" . SessionConf::$sessionFolderPath . "";
 		}
 
 		public static function pathlogin()
